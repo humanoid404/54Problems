@@ -1,0 +1,31 @@
+import math
+l=int(input('length?'))
+w=int(input('width?'))
+f=l*w
+meter=float(f*0.09290304)
+print ('the area is %d'%f,'square feet')
+print ('%.2f square meters'%meter)
+
+#challenges
+l=float(input('length?'))
+w=float(input('width?'))
+if l>0 and w>0 :
+    f=l*w
+    meter=float(f*0.09290304)
+    print ('the area is %d'%f,'square feet')
+    print ('%.2f square meters'%meter)
+
+
+que=input('select result')
+l=int(input('length?'))
+w=int(input('width?'))
+if que=='meter':
+    f=l*w
+    meter=float(f*0.09290304)
+    print ('the area is %d'%f,'square feet')
+    print ('%.2f square meters'%meter)
+else:
+    m = l * w
+    feet = float(m / 0.09290304)
+    print ('the area is %d' % m, 'square meters')
+    print ('%.2f square feet' % feet)

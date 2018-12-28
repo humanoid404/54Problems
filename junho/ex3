@@ -1,0 +1,28 @@
+quote=input('what is quote?')
+people=input('who said it?')
+print (people,'says,','"%s"'%quote)
+
+#challenge
+a=[]
+while len(a)<10:
+    input1=input('what is quote?')
+    a.append(input1)
+    if input1=='':
+        a.remove('')
+        break
+b=[]
+while len(b)<10:
+    input2=input('who said it?')
+    b.append(input2)
+    if input2=='':
+        b.remove('')
+        break
+i=0
+while i<10:
+    x=a.pop(0)
+    y=b.pop(0)
+    i=i+1
+    print ('%s says,'%x)
+    print ('"%s"'%y)
+    if x==0:
+        break

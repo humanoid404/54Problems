@@ -1,0 +1,16 @@
+question=input("what's your name?")
+print ('hello,',question,'nice to meet you!')
+
+print ("what's your name?")
+print ('hello, Brian, nice to meet you!')
+
+#challenges
+print ('hello,',input("what's your name?"),'nice to meet you!')
+
+name=input('what is your name?')
+if name == 'Brian' :
+    print ('hello,',name,',nice to meet you!')
+elif name == 'Junho' :
+    print ('hi %s'%name)
+else:
+    print ('ㅠㅠ')

@@ -1,0 +1,15 @@
+age=int(input('what is your current age?'))
+retire=int(input('at what age would you like to retire?'))
+now=2015
+print ('you have %d'%age,'years left until you can retire.')
+print ("it's %d"%now,', so you can retire in %d'%(now+retire-age))
+
+#challenge
+age=int(input('what is your current age?'))
+retire=int(input('at what age would you like to retire?'))
+now=2015
+if retire-age<0:
+    print ('already retire')
+else:
+    print ('you have %d' % age, 'years left until you can retire.')
+    print ("it's %d" % now, ', so you can retire in %d' % (now + retire - age))

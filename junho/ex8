@@ -1,0 +1,41 @@
+p=int(input('how many people?'))
+have=int(input('how many pizzas do you have?'))
+if not p>=0 and have>=0:
+    print ('not allowed value')
+pizza=8
+eat=2
+print ('%d people with'%p,'with %d pizzas'%eat)
+print ('each person gets %d pieces of pizza'%(pizza*have/p))
+print ('there are %d left over pieces'%(have*pizza-p*eat))
+
+#challenge
+p=int(input('how many people?'))
+have=int(input('how many pizzas do you have?'))
+if not p>=0 and have>=0:
+    print ('not allowed value')
+pizza=8
+eat=2
+print ('%d people with'%p,'with %d pizzas'%eat)
+if (pizza*have)%p != 1:
+    print ('each person gets %d pieces of pizza'%(pizza*have%p))
+elif (pizza*have)%p == 1:
+    print ('each person gets %d piece of pizza' % (pizza * have % p))
+print ('there are %d left over pieces'%(have*pizza-p*eat))
+
+want=[]
+while p > 0:
+    p=p-1
+    a=int(input('want pieces?'))
+    want.append(a)
+
+i=0
+total=0
+for i in want:
+    total=i+total
+
+buy=total/pizza
+if buy == 1 :
+    print ('purchase %d pizza'%buy)
+else:
+    print ('purchase %d pizzas' % buy)
+

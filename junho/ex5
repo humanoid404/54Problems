@@ -1,0 +1,28 @@
+a=input('what is the first num?')
+b=input('what is the second num?')
+operation=['+','-','*','/']
+A=int(a)
+B=int(b)
+cal=[A+B,A-B,A*B,A/B]
+for i in range(0,4):
+    print ('%d'%A,'%s'%operation[i],'%d ='%B,'%d'%cal[i])
+
+#challenges
+a=input('what is the first num?')
+b=input('what is the second num?')
+if type(float(a)) and type(float(b)) is str:
+    print ('only allow numeric')
+operation=['+','-','*','/']
+A=int(a)
+B=int(b)
+cal=[A+B,A-B,A*B,A/B]
+for i in range(0,4):
+    if A<0 or B<0:
+        print ("don't allow negative")
+        break
+    elif A>0 and B>0:
+        print ('%d' % int(a), '%s' % operation[i], '%d =' % int(b), '%d' % cal[i])
+
+
+
+#using try execpt

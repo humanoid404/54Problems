@@ -1,0 +1,32 @@
+
+n=input('enter a noun:')
+v=input('enter a verve:')
+ad=input('enter an adjective:')
+adv=input('enter an adverb:')
+print ('do you',v,'your',ad,n,adv,'? that is hilarious!')
+
+#challenge 1
+while input('if not want more story remain X') == 'O':
+    n = input('enter a noun:')
+    v = input('enter a verve:')
+    ad = input('enter an adjective:')
+    adv = input('enter an adverb:')
+    print ('do you', v, 'your', ad, n, adv, '? that is hilarious!')
+
+#challenge 2
+n=[]
+v=[]
+ad=[]
+adv=[]
+while input('if not want more story remain X') == 'O':
+    n.append(input('enter a noun:'))
+    v.append(input('enter a verve:'))
+    ad.append(input('enter an adjective:'))
+    adv.append(input('enter an adverb:'))
+
+while len(n)>0:
+    N=n.pop(int(input('pick N')))
+    V=v.pop(int(input('pick V')))
+    Ad=ad.pop(int(input('pick Ad')))
+    Adv=adv.pop(int(input('pick adv')))
+    print ('do you', v, 'your', ad, n, adv, '? that is hilarious!')

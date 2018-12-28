@@ -1,0 +1,15 @@
+string=input('what is the input string?')
+a=len(string)
+print (string,'has %d characters.'%a)
+
+#challenges
+
+while True :
+    string=input('string')
+    a=len(string)
+    if a == 0:
+        print ('enter something')
+    else:
+        print (string,'has %d characters.'%a)
+        break
+

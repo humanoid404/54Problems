@@ -83,19 +83,19 @@ def promptL():
 
 def calcSquare(length, width):
     coverSquareFeet = length*width
-    purchaceGallons = ceil(k * coverSquareFeet)
+    purchaceGallons = ceil(coverSquareFeet / k)
     return purchaceGallons, coverSquareFeet
 
 
 def calcHemisphere(radius):
     coverSquareFeet = 2*pi*radius**2
-    purchaceGallons = ceil(k * coverSquareFeet)
+    purchaceGallons = ceil(coverSquareFeet / k)
     return purchaceGallons, coverSquareFeet
 
 
 def calcL(length1, width1, length2, width2):
     coverSquareFeet = length1*width1 + length2*width2 - width1*width2
-    purchaceGallons = ceil(k * coverSquareFeet)
+    purchaceGallons = ceil(coverSquareFeet / k)
     return purchaceGallons, coverSquareFeet
 
 
@@ -106,7 +106,7 @@ def promptResult(purchaceGallons, coverSquareFeet):
 if __name__ == "__main__":
     patternNumber = re.compile(r"\d+(\.\d+)?")
     patternShape = re.compile(r" *0*[123] *")
-    k = 350  # 350 gallons cover 1 square feet
+    k = 350  # 1 gallons cover 350 square feet
 
     shape = promptShape()
     if shape == 1:  # square shape

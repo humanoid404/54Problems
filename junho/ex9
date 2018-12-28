@@ -1,0 +1,9 @@
+square=int(input('input square'))
+gallon=square/350
+intg=int(gallon)+1
+if intg == 1 :
+    print ('you will need to purchase %d gallon of'%intg)
+    print ('paint to cover %d square feet'%square)
+elif intg > 1 :
+    print ('you will need to purchase %d gallons of' % intg)
+    print ('paint to cover %d square feet' % square)

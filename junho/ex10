@@ -1,0 +1,103 @@
+item=[]
+quantity=[]
+i=0
+while i<3:
+    i=i+1
+    item.append(int(input('enter the price of item %d :'%i)))
+    quantity.append(int(input('enter the quantity of item %d :'%i)))
+x=[]
+while i>0:
+    i=i-1
+    x.append(item.pop()*quantity.pop())
+sum=0
+for y in x:
+    sum=sum+y
+a=float(sum*0.055)
+print ('subtotal:$%d'%sum)
+print ('Tax:$%f'%a)
+print ('Total:$%f'%(a+sum))
+#fail above keep input
+
+i=0
+x=[]
+item=[]
+quan=[]
+while i<3:
+    i=i+1
+    u=input('enter th price of item %d :'%i)
+    item.append(int(u))
+    if not int(u) >= 0 :
+        print ('do not allow')
+    quan.append(int(input('enter the quantity of item %d :'%i)))
+    if not quan[i-1] >= 0 :
+        print ('do not allow')
+    x.append(item[i-1]*quan[i-1])
+sum=0
+for y in x:
+    sum=sum+y
+a=float(sum*0.055)
+print ('subtotal:$%d'%sum)
+print ('Tax:$%.2f'%a)
+print ('Total:$%.2f'%(a+sum))
+#fail challenge
+
+i=0
+x=[]
+item=[]
+quan=[]
+while i<3:
+    i=i+1
+    a=int(input('enter th price of item %d :'%i))
+    item.append(a)
+    if type(a) == int :
+        pass
+    else:
+        print ('do not allow')
+    b=int(input('enter the quantity of item %d :'%i))
+    quan.append(b)
+    if type(b) == int :
+        pass
+    else:
+        print ('do not allow')
+    x.append(item[i-1]*quan[i-1])
+
+sum=0
+for y in x:
+    sum=sum+y
+a=float(sum*0.055)
+print ('subtotal:$%d'%sum)
+print ('Tax:$%.2f'%a)
+print ('Total:$%.2f'%(a+sum))
+
+
+
+
+
+
+i=0
+x=[]
+item=[25,'l',4]
+quan=[2,1,1]
+while i<len(item):
+    i=i+1
+    print ('enter th price of item %s :'%i,'%s'%item[i-1])
+    if type(item[i-1]) == int :
+        pass
+    else:
+        print ('do not allow')
+        break
+    print ('enter the quantity of item %s :'%i,'%s'%quan[i-1])
+    if type(quan[i-1]) == int :
+        pass
+    else:
+        print ('do not allow')
+        break
+    x.append(item[i-1]*quan[i-1])
+
+sum=0
+for y in x:
+    sum=sum+y
+a=float(sum*0.055)
+print ('subtotal:$%d'%sum)
+print ('Tax:$%.2f'%a)
+print ('Total:$%.2f'%(a+sum))

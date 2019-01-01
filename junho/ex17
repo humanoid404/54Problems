@@ -1,0 +1,25 @@
+try:
+    A=float(input('total alcohol consumed, in oz?'))
+    w=float(input('body weight in pounds?'))
+    H = float(input('number of hours since the last drink'))
+except:
+    print ('invalid')
+
+while True:
+    question=input('M or F?')
+    if question == 'M':
+        r=0.71
+        break
+    elif question == 'F':
+        r=0.66
+        break
+    else:
+        print ('invalid')
+
+BAC=(A*5.14/w*r)-0.015*H
+if BAC >= 0.08:
+    print ('your BAC is %s \n'
+        'it is not legal for you to drive.'%BAC)
+elif BAC <= 0.08:
+    print ('your BAC is %s \n'
+        'it is legal for you to drive.'%BAC)

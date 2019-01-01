@@ -1,0 +1,55 @@
+def round2(a):
+    if 0.5<=100*a-int(100*a)<1:
+        return (int(100*a)+1)/100
+    elif 0<=100*a-int(100*a)<0.5:
+        return (int(100*a))/100
+
+amount=float(input('what is the order amount?'))
+state=input('what state do you live in?')
+if state == 'Wisconsin':
+    county=input('what county do you live in?')
+
+if state == 'Wisconsin':
+    if county == 'Eau Claire':
+        tax=amount*(0.05)
+    elif county == 'Dunn':
+        tax=amount*(0.04)
+elif state == 'Korea':
+    if county == 'Seoul':
+        tax=amount*(0.5)
+elif state == 'Illinois':
+    tax=amount*(-0.08)
+else:
+    pass
+
+print ('the tax is $%s\n'
+       'the total is $%s'%(round2(tax),round2(amount+tax)))
+
+#challenge
+del county
+amount=float(input('what is the order amount?'))
+state=input('what state do you live in?')
+state1=state[0:2]
+if state1.upper() == 'WI':
+    county=input('what county do you live in?')
+elif state1.upper() == 'KO':
+    county=input('what county do you live in?')
+
+if state1.upper() == 'WI':
+    if county == 'Eau Claire':
+        tax=amount*(0.05)
+    elif county == 'Dunn':
+        tax=amount*(0.04)
+elif state1.upper() == 'KO':
+    if county == 'Seoul':
+        tax=amount*(0.5)
+elif state1.upper() == 'IL':
+    tax=amount*(-0.08)
+else:
+    pass
+
+print ('the tax is $%s\n'
+       'the total is $%s'%(round2(tax),round2(amount+tax)))
+
+#challenge-using switch : dose not have python
+

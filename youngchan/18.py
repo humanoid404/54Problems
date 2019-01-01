@@ -1,15 +1,9 @@
-def cTOf(temp):
-    return temp*9/5+32
-
-
-def fTOc(temp):
-    return (temp-32)*5/9
-
-
-cTOk = lambda t: t+273.15
-kTOc = lambda t: t-273.15
-fTOk = lambda t: fTOc(t)+273.15
-kTOf = lambda t: cTOf(t-273.15)
+def cTOf(t): return t*9/5+32
+def fTOc(t): return (t-32)*5/9
+def cTOk(t): return t+273.15
+def kTOc(t): return t-273.15
+def fTOk(t): return fTOc(t)+273.15
+def kTOf(t): return cTOf(t-273.15)
 
 
 tempNames = {"F": "Fahrenheit",

@@ -1,0 +1,43 @@
+age=int(input('what is your age?'))
+a='you are not old enough to legally drive'
+if age < 16:
+    b=a
+else:
+    b=a[0:7] + a[11:]
+print (b)
+
+#challenge
+age=int(input('what is your age?'))
+a='you are not old enough to legally drive'
+try:
+    if age<16:
+        print (a)
+    else:
+        print(a[0:7]+a[11:])
+except:
+    print ('invalid')
+
+#challenge
+a=[]
+b=[]
+i=0
+while i<3:
+    i=i+1
+    a.append(input('input country'))
+    b.append(input('input can drive age'))
+while i>0:
+    i=i-1
+    print (a[i-1],b[i-1])
+#----------------------------------------------------------
+age=int(input('what is your age?'))
+a={age>15:'legal to drive',age<=15:'illegal to drive'}
+a.get(age>15)
+try:
+    if age<16:
+        b=a.get(age<=15)
+    else:
+        b=a.get(age>15)
+except:
+    print ('invalid')
+
+print (b)

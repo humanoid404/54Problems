@@ -1,0 +1,17 @@
+while True:
+    password = input('what is the password?')
+    if password == 'abc$123':
+        print ('welcome!')
+        break
+    else:
+        print ('i do not know you')
+
+#challenge??
+id_password={}
+while True:
+    if input('need id?') == 'yes':
+        id_passwor[input('username?')] = input('password?')
+        pass
+    else:break
+
+#retry

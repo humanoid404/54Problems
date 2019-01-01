@@ -1,0 +1,25 @@
+#euro:dollar=rateu:rated
+#input data
+euro=81
+eurorate=137.51
+dollar=111.382
+rated=dollar*eurorate/euro
+
+print (
+    'how many euros are you exchanging? %s\n'
+    'what is the exchange rate? %s\n'
+    '%s euros at an exchange rate of %s is\n'
+    '%s U.S dollars'%(round2(euro),eurorate,round2(euro),eurorate,round2(dollar))
+)
+
+def round2(a):
+    if 0.5<=100*a-int(100*a)<1:
+        return (int(100*a)+1)/100
+    elif 0<=100*a-int(100*a)<0.5:
+        return (int(100*a))/100
+
+country_rate={'Korea':100,'Saudi':95}
+country_rate.keys()
+country_rate['Korea']
+country_rate.values()
+country_rate.get('Korea')

@@ -1,0 +1,42 @@
+P=float(input('what is the principal amount?'))
+r=float(input('what is the rate?'))
+t=float(input('what is number of years?'))
+n=float(input('what is number of times the interest'
+              ' is compounded per year?'))
+A=P*((1+((r/100)/n))**(n*t))
+print ('$%s invested at %s%% for %s years\n'
+            'compounded %s times per year is $%s.'%(int(P),r,int(t),int(n),round2(A)))
+
+def round2(a):
+    if 0.5<=100*a-int(100*a)<1:
+        return (int(100*a)+1)/100
+    elif 0<=100*a-int(100*a)<0.5:
+        return (int(100*a))/100
+
+#challenge
+try:
+    P=float(input('what is the principal amount?'))
+    r=float(input('what is the rate?'))
+    t=float(input('what is number of years?'))
+    n=float(input('what is number of times the interest'
+              ' is compounded per year?'))
+    A=P*((1+((r/100)/n))**(n*t))
+    print ('$%s invested at %s%% for %s years\n'
+            'compounded %s times per year is $%s.'%(int(P),r,int(t),int(n),round2(A)))
+except:
+    print ('invalid value')
+
+#challenge 2
+
+try:
+    A=float(input('what is the goal amount?'))
+    r=float(input('what is the rate?'))
+    t=float(input('what is number of years?'))
+    n=float(input('what is number of times the interest'
+              ' is compounded per year?'))
+    P=A*1/((1+((r/100)/n))**(n*t))
+    print ('$%s invested at %s%% for %s years\n'
+            'compounded %s times per year is $%s.\n'
+           %(round2(P),r,int(t),int(n),int(A)))
+except:
+    print ('invalid value')

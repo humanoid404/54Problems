@@ -1,0 +1,31 @@
+while True:
+    weight=eval(input('weight?'))
+    if type(weight) is int :
+        print ('%s'%a)
+        break
+    elif type(weight) is float :
+        print('%s'%a)
+        break
+    else:
+        print ('invalid')
+
+while True:
+    height=eval(input('height?'))
+    if type(height) is int :
+        print ('%s'%a)
+        break
+    elif type(height) is float :
+        print('%s'%a)
+        break
+    else:
+        print ('invalid')
+
+BMI=(weight/(height*height))*703
+if 18.5<=BMI<=25 :
+    print ('your BMI is %s\n'
+           'you are within the ideal weight range'%BMI)
+elif BMI>25 :
+    print ('your BMI is %s\n'
+           'you are overweight. you should see your doctor.' % BMI)
+
+#challenge similar to 18 

@@ -1,0 +1,44 @@
+print ('enter the number')
+a=input('enter the first num:')
+b=input('enter the second num:')
+c=input('enter the third num:')
+if a<=b<c or b<=a<c:
+    print ('the largest num is %s' % c)
+elif a<=c<b or c<=a<b:
+    print ('the largest num is %s' % b)
+elif b<=c<a or c<=b<a:
+    print ('the largest num is %s' % a)
+
+#challenge
+print ('enter the numeric')
+a=[]
+a.append(int(input('enter the number')))
+while True:
+    if input('want more number?') == 'y':
+        a.append(int(input('enter the number')))
+    else:
+        print ('answer')
+        break
+# cover to sort, reverse
+a.sort()
+a.reverse()
+print (a[0])
+#-----------------------------cover
+i=0
+a=[]
+b=[]
+num=int(input('input num'))
+if type(num) is int :
+    a.append(num)
+    b.append(num)
+
+while True:
+    try:
+        if a[i]<=a[i+1]:
+            a[i]=a[i+1]
+        elif a[i+1]<=a[i]:
+            a[i+1]=a[i]
+        i=i+1
+    except:
+        print ('answer:%s'%a[i])
+        break

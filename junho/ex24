@@ -1,0 +1,32 @@
+def isanagram():
+    print ('enter two strings and i will tell'
+           'you if they are anagrams:')
+    a=input('enter the first string:')
+    b=input('enter the second string:')
+    i=0
+    c=[]
+    d=[]
+    if len(a) == len(b):
+        while True:
+            try:
+                if a[i] == b[i]:
+                    i=i+1
+                elif a[i] != b[i]:
+                    c.append(a[i])
+                    d.append(b[i])
+                    i=i+1
+            except:
+                if len(c) == len(d) and c[0] == d[1] and c[1] == d[0]:
+                    print ('"%s" and "%s" are anagrams.'%(a,b))
+                    return True
+                    break
+                else:
+                    print ('different more than two spelling'
+                           'or something different spelling\n'
+                           'please check the word')
+                    return False
+                    break
+    else:
+        print ('length is invalid')
+        return False
+isanagram()

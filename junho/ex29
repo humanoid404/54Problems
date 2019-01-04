@@ -1,0 +1,11 @@
+while True:
+    return1 = input('what is the rate of return?')
+    try:
+        if eval(return1) == 0:
+            print ('do not allow')
+        elif type(eval(return1)) == int or float:
+            years=72/float(return1)
+            print ('it will take %s years'%years)
+            break
+    except:
+        print ('sorry invalid')

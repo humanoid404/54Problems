@@ -1,0 +1,27 @@
+def validateinput():
+    import re
+    first=input('enter the first name')
+    last=input('enter the last name')
+    zip=input('enter the zip code')
+    id=input('enter an employee id')
+    if 0 < len(first) <= 2:
+        return '"%s"is not a valid first name'%first
+    elif len(first) == 0:
+        return 'name must be filled in'
+    if 0 < len(last) <= 2:
+        return '"%s"is not a valid last name'%last
+    elif len(last) == 0:
+        return 'name must be filled in'
+    try:
+        if type(eval(zip)) == int:
+            pass
+    except:
+        return 'the zip code must be numeric'
+    if type(eval(id[:2])) == str and type(eval(id[3:])) == int:
+        pass
+    else:
+        return '%s is not valid id'%id
+    return 'there were no errors'
+#정규표현식? id 부분
+#challenge ?
+print (validateinput())

@@ -1,0 +1,13 @@
+def calculateMonthsUntilPaidOff():
+    import math
+    i=float(input('what is the APR on the card (as a percent)'))*0.01/365
+    b=float(input('what is your balance?'))
+    p=round(float(input('what is the monthly payment you can make?')),2)
+    x=math.log10((1+b/p*(1-(1+i)**30)))
+    y=math.log10(1+i)
+    n=-(1/30)*x/y
+    return 'It will take you %s months to pay off this card.'%round(n,-1)
+print (calculateMonthsUntilPaidOff())
+
+#challenge
+#change the eq 

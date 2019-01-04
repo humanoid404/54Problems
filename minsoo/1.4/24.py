@@ -4,12 +4,11 @@ def isAnagram(a,b):
         A = ''
         for i in range(len(a)):
             for j in range(len(b)):
-                try:
-                    if a[i] == b[j]:
-                        A = A + a[i]
-                except:
-                    pass
-        if len(A) == len(a):
+                if a[i] == b[j]:
+                    A = A + a[i]
+                    b = b[:j] + b[j+1:]
+                    break
+        if A == a:
             result = ''
         else:
             result = 'not '

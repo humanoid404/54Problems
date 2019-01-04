@@ -1,0 +1,15 @@
+month=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+number=int(input('please enter the number of the month:'))
+print ('the name of the month is %s'%month[number-1])
+
+#challenge
+month_E=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+month_K=['1월','2월','3월','4월']
+select=input('select language K is korean E english.')
+if select == 'E':
+    number=int(input('please enter the number of the month:'))
+    print ('the name of the month is %s'%month_E[number-1])
+elif select == 'K':
+    number = int(input('please enter the number of the month:'))
+    print ('the name of the month is %s' % month_K[number - 1])
+

@@ -27,8 +27,8 @@ def isAnagram(word1, word2):
 
 while True:
     print("Enter two strings and I'll tell you if they are anagrams.")
-    word1 = input("Enter the first string: ").strip()
-    word2 = input("Enter the second string: ").strip()
+    word1 = input("Enter the first string: ")
+    word2 = input("Enter the second string: ")
     isAnagramFlag = isAnagram(word1, word2)
     if isAnagramFlag < 0:
         print('"{}" and "{}" are not anagrams because they have different lengths.\n'.format(word1, word2))

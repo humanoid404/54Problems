@@ -11,12 +11,12 @@ def isAnagram(word1, word2):
     #                                         and "c" appears at the 2nd, 4th index in word2
     for i1 in range(l):
         if word1[i1] not in d:
-            d[word1[i1]] = [[i1],[]]
+            d[word1[i1]] = [[i1], []]
         else:
             d[word1[i1]][0].append(i1)
     for i2 in range(l):
         if word2[i2] not in d:
-            d[word2[i2]] = [[],[i2]]
+            d[word2[i2]] = [[], [i2]]
         else:
             d[word2[i2]][1].append(i2)
     for k in d:

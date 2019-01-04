@@ -9,7 +9,7 @@ def isAnagram(a,b):
                         A = A + a[i]
                 except:
                     pass
-        if len(A) == len(C):
+        if len(A) == len():
             result = ''
         else:
             result = 'not '

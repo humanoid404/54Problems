@@ -9,8 +9,6 @@ def isAnagram(a,b):
                         A = A + a[i]
                 except:
                     pass
-        print(A)
-        print(a)
         if len(A) == len(C):
             result = ''
         else:

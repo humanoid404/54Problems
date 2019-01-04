@@ -1,0 +1,20 @@
+if input('is the car silent when you turn the key?') == 'y':
+    if input('are the battery terminals corroded?') == 'y':
+        print ('clean terminals and try starting again.')
+    else:
+        print ('replace cables and try again')
+else:
+    if input('does the car make a clicking noise?') == 'y':
+        print ('replace the battery')
+    else:
+        if input('does the car crank up but fail to start?') == 'y':
+            print ('check spark plug connections')
+        else:
+            if input('does the engine start and then die?') == 'y':
+                if input('does your car have fuel injection?') == 'y':
+                    print ('get it in for service')
+                else:
+                    print ('check to ensure the chokes is opening and closing')
+
+
+

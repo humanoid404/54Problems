@@ -1,0 +1,23 @@
+
+def password_Validator():
+    i=0
+    special = ['!', '@', '#', '$', '%']
+    password=input('input password:')
+    if len(password) < 8:
+        if type(eval(password)) == int:
+            return "the password '%s' is a very weak password."%password
+        elif type(eval(password)) == str:
+            return "the password %s is a weak password."%password
+    elif len(password) >= 8:
+        while True:
+            try:
+                if password[i] in special:
+                    return "the password %s is a very strong password" % password
+                    break
+                i=i+1
+            except:
+                break
+        if type(eval(password)) == str:
+            return "the password %s is a strong password"%password
+
+print(password_Validator())

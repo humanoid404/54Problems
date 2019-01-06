@@ -11,5 +11,4 @@ def passwordValidator():
         return 4
     else:
         return 0
-passwordValidator()
 print(f"The password '{x}' is {D[passwordValidator()]} password.")

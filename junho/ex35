@@ -1,0 +1,33 @@
+#random.randint() , random.shuffle() : 리스트를 섞기
+import random
+NameList=[]
+i=0
+while i<10: #여기와 랜덤숫자를 늘리면 더욱 많은 케이스 커버,
+    enter=input('enter a name')
+    if enter != '':
+        NameList.append(enter)
+        i=i+1
+    elif enter == '':
+        break
+k=len(NameList)
+while True:
+    RandomNum=round(10*random.random())
+    if 0 < RandomNum < k+1:
+        print ('the winner is %s'%NameList[RandomNum-1])
+        break
+while True:
+    More=input('want more winner?')
+    if More == 'y':
+        RandomNum = round(10 * random.random())
+        if 0 < RandomNum < k :
+            print ('the winner is %s' % NameList[RandomNum - 1])
+            break
+    elif More == 'n':
+        break
+
+#cf
+import random
+a=[1,2,3,4]
+for i in list(a):
+    random.shuffle(a)
+    print (a.pop(0))

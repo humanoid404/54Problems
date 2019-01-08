@@ -67,7 +67,7 @@ class TestInput(unittest.TestCase):
             with self.subTest(tip=tipInput, expectedResult=tipResult):
                 self.assertEqual(testParseTip(tipInput), tipResult)
 
-
+# %load for code input, %run, %run -n for import, %run -i for interactive namespace
 if __name__ == "__main__":
     test = False
 

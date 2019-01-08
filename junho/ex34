@@ -1,0 +1,24 @@
+
+NameList = ['John', 'Jackie', 'Chris', 'Amanda', 'Jeremy']
+while True:
+    More=input('Want remove?')
+    if More == 'y':
+        i=0
+        k=len(NameList)
+        print (f"There are {k} employees")
+        while True:
+            if i < k:
+                print ('%s'%NameList[i])
+                i=i+1
+            else:
+                break
+        Remove=(input('enter an employee name to remove:'))
+        if Remove == NameList:
+            NameList.remove(Remove)
+        elif Remove != NameList:
+            print ('does not exist')
+    elif More == 'n':
+        break
+
+
+

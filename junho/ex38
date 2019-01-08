@@ -1,0 +1,21 @@
+
+def filterEven():
+    Enter = input('enter a list if Num, separate by spaces:')
+    List = Enter.split()  # default is space
+    i=0
+    even=[]
+    while True:
+        try:
+            if int(List[i])%2 == 0 :
+                even.append(int(List[i]))
+                i=i+1
+            elif int(List[i])%2 == 1:
+                i=i+1
+        except:
+            break
+    return even
+sum=''
+for i in filterEven():
+    x=str(i)
+    sum=sum+x+' '
+print ('the even numbers is %s'%sum)

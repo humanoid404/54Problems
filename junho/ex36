@@ -1,0 +1,19 @@
+import math as m
+Number=[]
+NumberD=[]
+while True:
+    enterNum=input('enter a number:')
+    if enterNum == 'done':
+        break
+    elif type(eval(enterNum)) == int:
+        Number.append(int(enterNum))
+        pass
+print ('numbers:',Number)
+average=sum(Number)/len(Number)
+for i in Number:
+    NumberD.append(((i-average)**2)/(len(Number)-1))
+Sigma=m.sqrt(sum(NumberD))
+print (f'the average is {average}.')
+print (f'the maximum is {max(Number)}.')
+print (f'the minimum is {min(Number)}.')
+print (f'the sd is {Sigma}.')

@@ -1,0 +1,43 @@
+def guessNum():
+    print ('lets play guess the number')
+    Choose=input('pick a difficulty level (1,2,or3)')
+    import random
+    k=1
+    if Choose == '1':
+        print ('range is 1 to 10')
+        randomnum=int(10*round(random.random(),1))
+        guessnum = int(input('what is your guess'))
+        while True:
+            if randomnum == guessnum:
+                print ('you got it %s guesses'%k)
+                break
+            elif randomnum > guessnum:
+                guessnum=int(input('Too high. guess again'))
+                k=k+1
+            elif randomnum < guessnum:
+                guessnum=int(input('Too low. guess again'))
+                k=k+1
+        if k == 1:
+            print ('you are mind reader')
+        elif 2 < k <= 3:
+            print ('most impressive')
+        elif 4 < k <= 6:
+            print ('you can do better than that')
+        elif k > 7:
+            print ('better luck next time')
+    retry=input('play again?')
+    if retry == 'n':
+        print ('good bye')
+    elif retry == 'y':
+        guessNum()
+guessNum()
+
+
+
+if Choose== '2':
+    print ('range is 1 to 100')
+    randomnum=int(100 * round(random.random(), 2))
+if Choose == '3':
+    print ('range is 1 to 1000')
+    randomnum=int(1000 * round(random.random(), 3))
+

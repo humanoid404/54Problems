@@ -1,0 +1,40 @@
+def TargetHeartRate():
+    while True:
+        try:
+            purse=int(input('resting purse:'))
+            age=int(input('age:'))
+            break
+        except:
+            print ('invalid')
+    a=[1]*9 #길이조절
+    intensity=[]
+    k=0
+    i=0.55
+    while True:
+        try:
+            intensity.append(a[k]*i)
+            i=i+0.05
+            k=k+1
+        except:
+            break
+    Rate=[]
+    x=0
+    while True:
+        try:
+            Rate.append((((220-age)-purse)*intensity[x])+purse)
+            x=x+1
+        except:
+            break
+    i=0
+    k=0
+    print ('intensity\tRate')
+    while True:
+        try:
+            print ('%s%%\t\t\t%s bpm'%(round(100*intensity[i]),round(Rate[k])))
+            i = i + 1
+            k = k + 1
+        except:
+            break
+TargetHeartRate()
+
+

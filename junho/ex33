@@ -1,0 +1,13 @@
+import random
+while True:
+    randomNum = round(10 * random.random())
+    if 1 <= randomNum < 9:
+        break
+    else:
+        pass
+AnsList=['yes','no','maybe','ask again later']*2
+question=input('what is your question')
+if question[-1] == '?':
+    print (AnsList[randomNum-1])
+
+

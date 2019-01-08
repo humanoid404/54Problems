@@ -1,0 +1,42 @@
+import random
+Char=['a','b','c']
+Num=random.randint(0,9)
+Special=['!','@','#']
+Password=[]
+Length=int(input('what is the minimum length?'))
+SpecialLen=int(input('how many special?'))
+NumLen=int(input('how many number'))
+CharLen=Length-SpecialLen-NumLen
+x=0
+y=0
+z=0
+while True:
+    if len(Password) < Length:
+        while x < SpecialLen:
+            Password.append(Special[random.randint(0,len(Special)-1)])
+            x=x+1
+        while y < NumLen:
+            Password.append(str(Num))
+            y=y+1
+        while True:
+            if z < CharLen:
+                Password.append(Char[random.randint(0,len(Char)-1)])
+                z=z+1
+            else:
+                break
+    else:
+        break
+random.shuffle(Password)
+sum=''
+for i in Password:
+    sum=sum+i
+print ('your password is',sum)
+#challenge
+#알파벳 셋을 주기 떄문에 위치를 알 수 있음.
+Char[0]=random.randint(0,9)
+#make this code to function
+Que=input('More Password?')
+if Que == 'y':
+    Password()
+else:
+    pass

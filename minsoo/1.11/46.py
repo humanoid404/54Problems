@@ -1,9 +1,11 @@
+import re
 f = open('C:/Users/wwnis/Desktop/46.txt', 'r')
 A = []
 B = []
 while 1:
     line = f.readline()
     if not line: break
+    line = re.sub('[^a-zA-Z0-9 _]', '', line.upper())
     line_col = line.split()
     for x in line_col:
         A.append(x)

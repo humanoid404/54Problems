@@ -10,8 +10,9 @@ while a != True:
     for i in range(len(data["products"])):
         if data["products"][i]["name"] == a:
             a = True
+            print(f'Name: {data["products"][i]["name"]}')
+            print(f'Price: ${data["products"][i]["price"]}')
+            print(f'Quantity on hand: {data["products"][i]["quantity"]}')
             break
-    print('Sorry, that product was not found in our inventory.')
-print(f'Name: {data["products"][i]["name"]}')
-print(f'Price: ${data["products"][i]["price"]}')
-print(f'Quantity on hand: {data["products"][i]["quantity"]}')
+        print('Sorry, that product was not found in our inventory.')
+        break

@@ -1,0 +1,18 @@
+OpenWordText=open('word.txt','r')
+List=[]
+while True:
+    Line=OpenWordText.readline()
+    if not Line:
+        break
+    List.append(Line)
+i=0
+sum=[]
+while True:
+    try:
+        sum=sum+List[i].split()
+        i=i+1
+    except:
+        break
+Find=input('Find number of words')
+print ('%s:'%Find,'*'*sum.count(Find))
+OpenWordText.close()

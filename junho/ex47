@@ -1,0 +1,44 @@
+
+import urllib
+import json
+from pprint import pprint
+
+ServiceKey = "서비스 Key"
+url = "http://api.open-notify.org/astros.json"
+request = urllib.request.Request(url)
+response = urllib.request.urlopen(request)
+rescode = response.getcode()
+if(rescode==200):
+    response_body = response.read()
+    print(response_body.decode('utf-8'))
+    dict = json.loads(response_body.decode('utf-8'))
+    pprint(dict)
+else:
+    print("Error Code:" + rescode)
+
+print('there are %s people in space right now:'%len(dict))
+print('%-20s | %-7s'%('Name','Craft'))
+print('-'*30)
+i=0
+while True:
+    try:
+        print('%-20s | %-7s'%(dict['people'][i]['name'],dict['people'][i]['craft']))
+        i=i+1
+    except:
+        break
+#challenge sorted by name
+SortedSet=sorted(dict['people'], key=lambda x: x["name"]) #jason sorted by key
+print('there are %s people in space right now:'%len(dict))
+print('%-20s | %-7s'%('Name','Craft'))
+print('-'*30)
+i=len(SortedSet)-1
+while True:
+    try:
+        if i >= 0 :
+            print('%-20s | %-7s'%(dict['people'][i]['name'],dict['people'][i]['craft']))
+            i = i-1
+        else:
+            break
+    except:
+        break
+

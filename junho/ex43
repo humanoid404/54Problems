@@ -1,0 +1,12 @@
+SiteName=input('Site name:')
+Author=input('Author:')
+Java=input('Do you want a folder for Java?')
+Css=input('Do you want a folder for Css?')
+if Java == 'y':
+    JavaCreate()
+else:
+    pass
+if Css == 'y':
+    CssCreate()
+else:
+    pass

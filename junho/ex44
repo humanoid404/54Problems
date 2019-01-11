@@ -1,0 +1,44 @@
+Products=[{"name":"widget","price":25.00,"quantity":5},
+          {"name": "Thing", "price": 15.00, "quantity": 5},
+          {"name": "Doodad","price": 5.00, "quantity": 10}]
+i=0
+#Namelist
+NameList=[]
+while True:
+    try:
+        NameList.append(Products[i]['name'])
+        i=i+1
+    except:
+        break
+while True:
+    i=0
+    Search=input('what is product name')
+    if Search in NameList:
+        while True:
+            try:
+                if Products[i]['name'] == Search:
+                    print ('name : %s'%Products[i]['name'])
+                    print ('price : $%s'%Products[i]['price'])
+                    print ('quantity : %s'%Products[i]['quantity'])
+                    break
+                else:
+                    i=i+1
+            except:
+                break
+        break
+    else:
+        print ('Sorry that product was not found in our inventory')
+
+def Add():
+    i=len(Products)-1
+    Products.append({})
+    Products[i+1]['name']=input('input name')
+    Products[i+1]['quantity']=input('input quantity')
+    Products[i+1]['price']=input('input price')
+while True:
+    add = input('Wand add item?')
+    if add == 'y':
+        Add()
+    else:
+        print ('no add')
+        break

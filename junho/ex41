@@ -1,0 +1,17 @@
+Name=['Ling, Mai','Johnson, Jim','Zarnecki, Sabrina','Jones, Chris','Jones, Aaron']
+while True:
+    inputName=(input('input name'))
+    if inputName =='':
+        break
+    else:
+        Name.append(inputName)
+print ('total of %s names'%len(Name))
+print ('-'*20)
+Name.sort()
+i=0
+while True:
+    try:
+        print (Name[i])
+        i=i+1
+    except:
+        break

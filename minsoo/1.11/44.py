@@ -11,7 +11,7 @@ while a != True:
         if data["products"][i]["name"] == a:
             a = True
             break
-        else: print('Sorry, that product was not found in our inventory.')
+    print('Sorry, that product was not found in our inventory.')
 print(f'Name: {data["products"][i]["name"]}')
 print(f'Price: ${data["products"][i]["price"]}')
 print(f'Quantity on hand: {data["products"][i]["quantity"]}')

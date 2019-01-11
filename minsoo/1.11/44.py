@@ -14,5 +14,4 @@ while a != True:
             print(f'Price: ${data["products"][i]["price"]}')
             print(f'Quantity on hand: {data["products"][i]["quantity"]}')
             break
-        print('Sorry, that product was not found in our inventory.')
-        break
+    if a != True: print('Sorry, that product was not found in our inventory.')

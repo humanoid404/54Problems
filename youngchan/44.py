@@ -80,7 +80,7 @@ while True:
                     df = df.append(pd.DataFrame(inputdata), ignore_index=True)
                     jsonData = dataFrameToJsonData(df)
                     jsonString = json.dumps(jsonData, indent=4, sort_keys=True)
-                    jsonString = re.sub(r'("price": \d+\.)(\d,)', '\g<1>0\g<2>', jsonString)
+                    jsonString = re.sub(r'("price": \d+\.)(\d,)', r'\g<1>0\g<2>', jsonString)
                     with open("44.data", "w") as f:
                         f.write(jsonString)
                     print("The product {} is added.\n".format(name))

@@ -4,6 +4,7 @@
 # map(lambda x:x[1], ((1,{"a":1,"b":'b'}), (2,{"a":2,"b":'x'})))
 # # map(function, list) := [function(i) for i in list] 라는 뜻이다
 
+# # sorted의 cmp 키워드는 python2에서만 있음. python3에서는 임의의 compare 함수를 줄 수 없음
 # def compare(x,y):
 #     if x["a"] < y["a"]:
 #         return -1

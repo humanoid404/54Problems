@@ -1,0 +1,16 @@
+# print(list(map(lambda x: x[1], sorted(map(lambda x: (x["b"], x), [{"a":2,"b":'x'},{"a":1,"b":'b'}])))))
+
+# # 이를 해석하자면
+# map(lambda x:x[1], ((1,{"a":1,"b":'b'}), (2,{"a":2,"b":'x'})))
+# # map(function, list) := [function(i) for i in list] 라는 뜻이다
+
+# def compare(x,y):
+#     if x["a"] < y["a"]:
+#         return -1
+#     elif x["a"] > y["a"]:
+#         return 1
+#     else:
+#         return 0
+
+print(sorted([{"a":2,"b":'x'},{"a":1,"b":'b'}], key=lambda x: x["b"]))
+# 이거시 sorted by이다.

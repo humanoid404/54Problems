@@ -1,0 +1,49 @@
+RawData='Ling,Mai,55900\nJohnson,Jim,56500\nJones,Aaron,46000\nJones,Chris,34500'
+Data=RawData.split('\n')
+i=0
+DataSort=[]
+while True:
+    try:
+        DataSort.append(Data[i].split(','))
+        i=i+1
+    except:
+        break
+print ('%-10s %-10s %-10s'%('Last','First','Salary'))
+print ('-'*30)
+i=0
+while True:
+    try:
+        print ('%-10s %-10s %-10s'%(DataSort[i][0],DataSort[i][1],DataSort[i][2]))
+        i=i+1
+    except:
+        break
+
+
+#challenge #cheack max,min output
+RawData='Ling,Mai,55900\nJohnson,Jim,56500\nJones,Aaron,46000\nJones,Chris,34500'
+Data=RawData.split('\n')
+i=0
+DataSort=[]
+while True:
+    try:
+        DataSort.append(Data[i].split(','))
+        i=i+1
+    except:
+        break
+print ('%-10s %-10s %-10s'%('Last','First','Salary'))
+print ('-'*30)
+i=0
+while True:
+    try:
+        while True:
+            if DataSort[i][2] < DataSort[i+1][2]:
+                print ('%-10s %-10s %-10s'%(DataSort[i+1][0],DataSort[i+1][1],DataSort[i+1][2]))
+                del DataSort[i+1]
+                break
+            elif DataSort[i][2] > DataSort[i+1][2]:
+                print ('%-10s %-10s %-10s'%(DataSort[i][0],DataSort[i][1],DataSort[i][2]))
+                del DataSort[i]
+                break
+        i=i+1
+    except:
+        break

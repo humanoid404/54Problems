@@ -16,3 +16,29 @@ while True:
 Find=input('Find number of words')
 print ('%s:'%Find,'*'*sum.count(Find))
 OpenWordText.close()
+
+
+#chal
+OpenWordText=open('word.txt','r')
+import re
+data=OpenWordText.read()
+dataU=data.upper()
+p=re.compile('[a-zA-Z]+')
+result=p.findall(dataU)
+result.sort()
+i=0
+Length=[]
+while True:
+    try:
+        if result[i] == result[i+1]:
+            Length.append(result[i])
+            i=i+1
+        elif result[i] != result[i+1]:
+            Length.append(result[i])
+            print('%s:'%result[i],'*'*len(Length))
+            i=i+1
+            Length.clear()
+    except:
+        break
+
+OpenWordText.close()

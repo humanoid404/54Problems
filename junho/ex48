@@ -20,7 +20,7 @@ if 22.5 < Direction < 72.5:
     print('Direction NE')
 #리스트를 넣고싶은 방향 순서대로 작성 후 프린트를 반복문에 넣기.
 #각도는 적절하게 상수배로 if 단일문 반복회피.
-print('Chicago\'s weather is',weather)
+print('Seoul\'s weather is',weather)
 print('Current temperature : ', temp,'°C')
 print('Max     temperature : ', temp_max,'°C')
 print('Min     temperature : ', temp_min,'°C')

@@ -1,0 +1,28 @@
+import httplib2
+import json
+
+url = 'http://api.openweathermap.org/data/2.5/weather?units=Metric&q='
+city = 'Chicago'
+mykey = '&APPID=c9aaca09749e144f4f7c71eb4faf8122'
+
+h = httplib2.Http()
+myrequest = url+city+mykey
+response, content = h.request(myrequest, 'GET')
+result = json.loads(content.decode('utf-8'))
+
+humidity = result['main']['humidity']
+temp = result['main']['temp']
+temp_max = result['main']['temp_max']
+temp_min = result['main']['temp_min']
+weather = result['weather'][0]['main']
+Direction=result['wind']['deg']
+if 22.5 < Direction < 72.5:
+    print('Direction NE')
+#리스트를 넣고싶은 방향 순서대로 작성 후 프린트를 반복문에 넣기.
+#각도는 적절하게 상수배로 if 단일문 반복회피.
+print('Chicago\'s weather is',weather)
+print('Current temperature : ', temp,'°C')
+print('Max     temperature : ', temp_max,'°C')
+print('Min     temperature : ', temp_min,'°C')
+print('Current humidity    : ', humidity,'%')
+#C to F eq

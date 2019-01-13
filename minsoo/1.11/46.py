@@ -24,3 +24,10 @@ while i in range(len(A)):
 C = sorted(B, key = lambda x: x[0], reverse = True)
 for i in range(len(C)):
     print(f'{C[i][1]+":":<15} {"*"*C[i][0]:<10}')
+
+
+
+# 이런 방법도 있다.
+result_list=[{'s':0, 'badger': 4, 'd':1},{'x':3.1, 'the': 2},{'a':3}]
+result_sorted = sorted(result_list, key = lambda x:list(x.values()))
+print(result_sorted)

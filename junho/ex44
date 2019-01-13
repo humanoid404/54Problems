@@ -1,44 +1,44 @@
-Products=[{"name":"widget","price":25.00,"quantity":5},
-          {"name": "Thing", "price": 15.00, "quantity": 5},
-          {"name": "Doodad","price": 5.00, "quantity": 10}]
-i=0
-#Namelist
-NameList=[]
-while True:
-    try:
-        NameList.append(Products[i]['name'])
-        i=i+1
-    except:
-        break
-while True:
-    i=0
-    Search=input('what is product name')
-    if Search in NameList:
-        while True:
-            try:
-                if Products[i]['name'] == Search:
-                    print ('name : %s'%Products[i]['name'])
-                    print ('price : $%s'%Products[i]['price'])
-                    print ('quantity : %s'%Products[i]['quantity'])
-                    break
-                else:
-                    i=i+1
-            except:
-                break
-        break
-    else:
-        print ('Sorry that product was not found in our inventory')
 
-def Add():
-    i=len(Products)-1
-    Products.append({})
-    Products[i+1]['name']=input('input name')
-    Products[i+1]['quantity']=input('input quantity')
-    Products[i+1]['price']=input('input price')
+# Making JSON file input:json.dump , output:json.dumps
+def make_JSON(x,y):
+    name=str(x+'.json')
+    with open(name, 'w', encoding="utf-8") as make_file:
+        json.dump(y, make_file, ensure_ascii=False, indent="\t")
+import json
+from collections import OrderedDict #알파펫순서로 자동정렬 방지
+products_data = OrderedDict()
+products_data["products"] = [
+    {"name":"widget","price":25.00,"quantity":5},
+    {"name": "Thing", "price": 15.00, "quantity": 5},
+    {"name": "Doodad","price": 5.00, "quantity": 10}
+    ]
+make_JSON('ProductJason',products_data)
+with open('ProductJason.json', 'rb') as f:
+    ProductJason = json.load(f)
+NameList=[]
+for i in ProductJason['products']:
+    x=list(i.values())
+    NameList.append(x[0])
 while True:
-    add = input('Wand add item?')
-    if add == 'y':
-        Add()
-    else:
-        print ('no add')
+    InputName = input('what is the product name?')
+    if InputName not in NameList:
+        print('Sorry, that product was not found in our inventory.')
+    elif InputName in NameList:
+        for i in ProductJason['products']:
+            if i['name'] == InputName:
+                x=list(i.values())
         break
+print('Name:%s'%x[0])
+print('Price:$%s'%x[1])
+print('Quantity on hand:%s'%x[2])
+AddD=input('If you want add press y')
+if AddD == 'y':
+    Add()
+else:
+    pass
+def Add():
+    i=len(ProductJason['products']) #3
+    ProductJason['products'].append({})
+    ProductJason['products'][i]['name']=input('Add Name:')
+    ProductJason['products'][i]['price']=input('Add Price:')
+    ProductJason['products'][i]['quantity']=input('Add Quantity:')

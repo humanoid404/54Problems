@@ -1,0 +1,34 @@
+#code
+#keyword
+import requests
+from bs4 import BeautifulSoup
+#keyword=input('keyword')
+keyword='데스노트'
+url='https://movie.naver.com/movie/search/result.nhn?query='+keyword+'&section=all&ie=utf8'
+text = requests.get(url).text
+soup=BeautifulSoup(text,'html.parser')
+gett=soup.get_text()
+get2=soup.findAll('span')
+x = soup.find_all('span')
+l=soup.findAll('dd',{'class':"point"})
+v=soup.find_all('dd')
+k=''
+for i in l:
+    k=k+i.text
+k.strip()
+Split=k.split('\t')
+sum=''
+for i in Split:
+    sum=sum+i
+vv=sum.split('\n')
+while True:
+    try:
+        vv.remove('')
+    except:
+        break
+if len(vv) > 1 :
+    print(keyword)
+    for i, vv in enumerate(vv):
+        print(i+1,'평점',vv)
+elif len(vv) == 1:
+    print(keyword, '평점', vv)

@@ -1,0 +1,21 @@
+#제자리에 덮어쓰기
+fr=open('word2.txt','r')
+data=fr.read()
+dataR=data.replace('use','utilize')
+fr.close()
+fw=open('word2.txt','w')
+fw.write(dataR)
+fw.close()
+
+#새로운 파일에 옮겨쓰기
+fr=open('word2.txt','r')
+data=fr.read()
+From='use'
+To='utilize'
+dataR=data.replace(From,To)
+Count=dataR.count('utilize')
+fr.close()
+fw=open('word3.txt','w')
+fw.write(dataR)
+fw.close()
+print('num of convert word: %s'%Count)
